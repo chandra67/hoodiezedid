@@ -1,0 +1,6 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /hoodiezed/shop/
+
+RewriteRule ^([a-z]+)$ category.php?category=$1 [NC]
+RewriteRule ^all-category$ category.php?category=all [NC]

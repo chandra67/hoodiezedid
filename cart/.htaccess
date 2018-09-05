@@ -1,0 +1,5 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /hoodiezed/product/
+
+RewriteRule ^([a-z]+)$ product.php?permalink=$1 [NC]

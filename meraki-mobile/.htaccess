@@ -1,0 +1,26 @@
+RewriteEngine on
+Options +FollowSymlinks
+RewriteBase /meraki/meraki-mobile/
+
+RewriteRule ^Home$ index.php [NC]
+RewriteRule ^faq$ faq.php [NC]
+RewriteRule ^search-result$ search.php [NC]
+RewriteRule ^confirmation$ confirmation.php [NC]
+RewriteRule ^About$ about.php [NC]
+RewriteRule ^catchus$ catchus.php [NC]
+RewriteRule ^shop/([0-9]+)/(.*)$ category.php?category=$1&&$2 [NC]
+RewriteRule ^shop/all/(.*)$ category.php?category=all&&$1 [NC]
+RewriteRule ^artist/all/ artist.php [NC]
+RewriteRule ^artist/([0-9]+)/(.*)$ artist-page.php?artistno=$1&&$2 [NC]
+RewriteRule ^contest/(.*)/$ contest.php [NC]
+RewriteRule ^product/([0-9]+)/(.*)$ product.php?productno=$1 [NC]
+RewriteRule ^shop/cart/(.*)$ cart.php$1 [NC]
+RewriteRule ^shop/checkout/(.*)$ checkout.php$1 [NC]
+RewriteRule ^shop/thankyou/(.*)$ thankyou.php$1 [NC]
+
+RewriteRule ^news/([0-9]+)/(.*)$ news.php?newsid=$1&&$2 [NC]
+RewriteRule ^tutorial/([0-9]+)/(.*)$ tutorial.php?newsid=$1&&$2 [NC]
+RewriteRule ^daily/([0-9]+)/(.*)$ daily.php?category=$1&&$2 [NC]
+RewriteRule ^daily/all/(.*)$ daily.php?category=all&&$1 [NC]
+RewriteRule ^contest/all/(.*)$ contest.php [NC]
+RewriteRule ^artworks/contest/$ contest-artworks.php [NC]
